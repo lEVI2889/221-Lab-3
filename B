@@ -1,15 +1,13 @@
 import java.util.*;
 
-public class CountGreaterSquarePairsBIT {
+public class CountTheInversion {
     static class BIT {
         int[] tree;
         int size;
-
         BIT(int n) {
             size = n;
             tree = new int[n + 2]; // 1-based indexing
         }
-
         void update(int i, int delta) {
             while (i <= size) {
                 tree[i] += delta;
